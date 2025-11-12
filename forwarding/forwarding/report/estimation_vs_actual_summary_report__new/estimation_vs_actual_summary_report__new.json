@@ -1,0 +1,38 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2022-03-30 17:37:03.891124",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Main Letterhead",
+ "modified": "2022-06-14 16:49:31.352842",
+ "modified_by": "Administrator",
+ "module": "Forwarding",
+ "name": "Estimation VS Actual Summary Report_-NEW",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "Select \n   `tabOperations`.name as \"Operations:Data:250\",\n    `tabOperations`.date as \"Date:Date:200\",\n    `tabOperations`.customer as \"Customer:Data:200\",\n    `tabOperations`.branch as \"Branch:Data:150\",\n    `tabOperations`.operation_status as \"Status:Data:200\",\n    SUM( `tabGL Entry`.credit )as \"Actual Income:Float:120\",\n    SUM( `tabGL Entry`.debit )as \"ActualExpense:Float:120\",\n    ( SUM(`tabGL Entry`.credit) -   SUM(`tabGL Entry`.debit) ) as \"Actual Profit or Loss:Float:180\", \n    `tabOperations`.total_rate as \"Estimated Income:Float:120\",\n    `tabOperations`.total_cost as \"Estimated Expense:Float:120\",\n    (`tabOperations`.total_rate - `tabOperations`.total_cost) as \"Estimated Profit or Loss:Float:180\"\nFrom\n    `tabOperations` \n     LEFT JOIN `tabGL Entry` ON (`tabGL Entry`.project = `tabOperations`.name AND `tabGL Entry`.account in (select name from `tabAccount` where account_type in ('Income Account','Cost of Goods Sold') AND `tabGL Entry`.is_cancelled=0))\n\n    GROUP BY\n    `tabOperations`.name\n    \n",
+ "ref_doctype": "GL Entry",
+ "report_name": "Estimation VS Actual Summary Report_-NEW",
+ "report_script": "",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ]
+}

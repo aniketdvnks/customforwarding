@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "autoname": "format:DN-{YY}-{#####}",
+ "creation": "2022-04-19 19:00:15.504837",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "operations",
+  "customer",
+  "address",
+  "to_attention",
+  "delivery_details_section",
+  "truck_no",
+  "driver",
+  "driver_contact",
+  "column_break_5",
+  "delivery_location",
+  "delivery_date",
+  "delivery_time",
+  "section_break_11",
+  "no_of_pallets",
+  "net_weight",
+  "gross_weight",
+  "cbm",
+  "packages",
+  "chargable_weight",
+  "section_break_15",
+  "container_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "operations",
+   "fieldtype": "Link",
+   "label": "Operations",
+   "options": "Operations"
+  },
+  {
+   "fieldname": "truck_no",
+   "fieldtype": "Data",
+   "label": "Truck No"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver"
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Small Text",
+   "label": "Delivery Location"
+  },
+  {
+   "fieldname": "delivery_details_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery Details"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "delivery_time",
+   "fieldtype": "Time",
+   "label": "Delivery Time"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "to_attention",
+   "fieldtype": "Data",
+   "label": "To Attention"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "net_weight",
+   "fieldtype": "Float",
+   "label": " Net Weight"
+  },
+  {
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "label": "Gross weight"
+  },
+  {
+   "fieldname": "packages",
+   "fieldtype": "Data",
+   "label": "Packages"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "container_details",
+   "fieldtype": "Table",
+   "label": "Container Details",
+   "options": "Container Details"
+  },
+  {
+   "fieldname": "cbm",
+   "fieldtype": "Float",
+   "label": "CBM"
+  },
+  {
+   "fieldname": "driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact"
+  },
+  {
+   "fieldname": "chargable_weight",
+   "fieldtype": "Float",
+   "label": "Chargable Weight"
+  },
+  {
+   "fieldname": "no_of_pallets",
+   "fieldtype": "Data",
+   "label": "No of pallets"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-23 12:20:51.134149",
+ "modified_by": "Administrator",
+ "module": "Forwarding",
+ "name": "Delivery Challan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
